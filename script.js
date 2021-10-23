@@ -1,7 +1,7 @@
 //variables
 var inputEl = document.querySelector("input[name=city");
 var submitBtn = document.querySelector("#searchbtn");
-var previousCitiesContainer = document.querySelector("#previous-cities");
+var searchedCitiesContainer = document.querySelector("#searched-cities");
 var mainEl = document.querySelector("#main-card");
 var forecast = document.querySelector("#forecast");
 var formEl = document.querySelector("form");
@@ -73,8 +73,8 @@ function searchAndGenerateWeather(city) {
 
           mainEl.append(cityWeatherList);
 
-          //--------------------------
-          // Forcast Section --------
+        
+          //Forecast Section// 
           var forecastTitle = document.createElement("h2");
           forecastTitle.textContent = "5-day Forecast";
           forecast.append(forecastTitle);
@@ -82,7 +82,6 @@ function searchAndGenerateWeather(city) {
           for (var i = 0; i < 5; i++) {
             var dayXweather = weatherData.daily[i];
             var dayXweatherCard = document.createElement("ul");
-            // dayXweatherCard.style("width","20%")
 
             var date = moment.unix(dayXweather.sunrise).format("DD/MM/YYYY");
 
@@ -127,9 +126,9 @@ formEl.addEventListener("click", function (e) {
 });
 
 function intialLoad() {
-  var previousCitiesButtons = localStorage.getItem("previousCities");
-  if (previousCitiesButtons) {
-    cityButtons = JSON.parse(previousCitiesButtons);
+  var searchedCitiesButtons = localStorage.getItem("searchedCities");
+  if (searchedCitiesButtons) {
+    cityButtons = JSON.parse(searchedCitiesButtons);
     makeButtons();
   }
 }
@@ -146,11 +145,11 @@ function makeButtons() {
       var searchCity = this.getAttribute("data-value");
       searchAndGenerateWeather(searchCity);
     });
-    previousCitiesContainer.append(newBtn);
+    searchedCitiesContainer.append(newBtn);
   }
 
   console.log(cityButtons)
-  localStorage.setItem("previousCities", JSON.stringify(cityButtons));
+  localStorage.setItem("searchedCities", JSON.stringify(cityButtons));
 }
 
 intialLoad()

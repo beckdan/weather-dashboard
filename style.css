@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+  /*font shorthand for: style:normal, Weight:normal, Size: 100% (16px), Height:1.5x, Family: sans-serif */
+  font: normal normal 100%/1.5 'Play', sans-serif;; 
+}
+
+
+header {
+  font-size: 70px;
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: grey 3px 3px 3px;
+  margin-bottom: 40px;
+}
+
+.form-label {
+  font-size: 35px;
+  text-decoration: bold;
+  text-shadow: grey 2px 2px 2px;
+  text-align: center;
+}
+
+.form-control {
+  box-shadow: grey 3px 3px 5px;
+  box-sizing: 50px;
+}
+
+.row {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  text-decoration: underline;
+  text-shadow: grey 2px 2px 2px;
+}
+
+#forecast {
+  background-color: rgb(179, 177, 177, 0.5); 
+  box-shadow: grey 2px 2px 2px;
+}
+
+#searchbtn {
+  background-color: olive;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 2px;
+  box-shadow: grey 3px 3px 3px 
+  
+ 
+}
+
+#main-card {
+  background-color: rgb(12, 137, 168, 0.5);
+  box-shadow: grey 2px 2px 2px;
+  margin-bottom: 5px;
+}

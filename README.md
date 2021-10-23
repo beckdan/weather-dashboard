@@ -16,8 +16,8 @@ This project is a weather dashboard that displays a five day forecast for a spec
 ​
 This project utilizes:
 - HTML
-- CSS
-- JavaScript
+- CSS (Bootstrap)
+- JavaScript (moment.js)
 
 ​
 Deployed link: 
