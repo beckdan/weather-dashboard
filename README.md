@@ -20,7 +20,7 @@ This project utilizes:
 - JavaScript (moment.js)
 
 ​
-Deployed link: 
+Deployed link: https://beckdan.github.io/weather-dashboard/
 ​
 ## Technologies
 ​
